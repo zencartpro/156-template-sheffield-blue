@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: 2_1.php 2019-09-02 19:13:51Z webchills $
+ * @version $Id: 2_1.php 2019-09-02 20:40:51Z webchills $
  */
 $configuration = $db->Execute("SELECT configuration_group_id FROM " . TABLE_CONFIGURATION_GROUP . " WHERE configuration_group_title = '" . BOX_CONFIGURATION_RESPONSIVE_SHEFFIELD_BLUE . "' ORDER BY configuration_group_id ASC;");
 if ($configuration->RecordCount() > 0) {
@@ -245,11 +245,11 @@ $db->Execute("UPDATE " . TABLE_CONFIGURATION . " SET configuration_value = 'fals
 // Banners
 $db->Execute("INSERT IGNORE INTO " . TABLE_BANNERS . " (banners_title, banners_url, banners_image, banners_group, banners_html_text, expires_impressions, expires_date, date_scheduled, date_added, date_status_change, status, banners_open_new_windows, banners_on_ssl, banners_sort_order)
   VALUES 
-('Modernes Responsive Design', '#', 'banners/slide3op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '3'),
-('Optimiert für alle Geräte', '#', 'banners/slide4op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '4'),
-('Zahlreiche Zusatzfunktionen', '#', 'banners/slide5op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '0', '5'),
-('Multilinguale Installation und Administration', '#', 'banners/slide2op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '2'),
-('Slideshow per Admin steuerbar', '#', 'banners/slide1op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '1');");
+('Modernes Responsive Design', '', 'banners/slide3op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '3'),
+('Optimiert für alle Geräte', '', 'banners/slide4op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '4'),
+('Zahlreiche Zusatzfunktionen', '', 'banners/slide5op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '1', '0', '5'),
+('Multilinguale Installation und Administration', '', 'banners/slide2op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '2'),
+('Slideshow per Admin steuerbar', '', 'banners/slide1op.jpg', 'homepageslide', NULL, '0', NULL, NULL, '0001-01-01 00:00:00', NULL, '1', '0', '1', '1');");
 $db->Execute(" SELECT @gid:=configuration_group_id
 FROM ".TABLE_CONFIGURATION_GROUP."
 WHERE configuration_group_title= 'Sheffield Blue'
