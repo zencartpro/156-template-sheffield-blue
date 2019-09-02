@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2019 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: 2_1.php 2019-04-27 18:13:51Z webchills $
+ * @version $Id: 2_1.php 2019-09-02 19:13:51Z webchills $
  */
 $configuration = $db->Execute("SELECT configuration_group_id FROM " . TABLE_CONFIGURATION_GROUP . " WHERE configuration_group_title = '" . BOX_CONFIGURATION_RESPONSIVE_SHEFFIELD_BLUE . "' ORDER BY configuration_group_id ASC;");
 if ($configuration->RecordCount() > 0) {
@@ -233,17 +233,6 @@ $db->Execute("INSERT  IGNORE INTO " . TABLE_FLEXIBLE_FOOTER_MENU_CONTENT . " (pa
 $db->Execute("SELECT @sortorder:=max(sort_order) FROM " . TABLE_ADMIN_PAGES . " ;");
 $db->Execute("INSERT IGNORE INTO " . TABLE_ADMIN_PAGES . " (page_key, language_key, main_page, page_params, menu_key, display_on_menu, sort_order) VALUES
 ('flexibleFooterMenu', 'BOX_TOOLS_FLEXIBLE_FOOTER_MENU', 'FILENAME_FLEXIBLE_FOOTER_MENU', '', 'tools', 'Y', @sortorder+1);");
-
-// Column Layout Grid
-$db->Execute("DELETE FROM " . TABLE_CONFIGURATION . " where configuration_key IN ('PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER,PRODUCT_LISTING_GRID_SORT');");
-
-$db->Execute("INSERT IGNORE INTO " . TABLE_CONFIGURATION . " (configuration_title, configuration_key, configuration_value, configuration_description, configuration_group_id, sort_order,  last_modified, date_added, use_function, set_function) VALUES 
-('Product Listing - Layout Style - Customer Control', 'PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER', '0', 'Allow the customer to select the layout style (0=no, 1=yes):', '8', '43', NULL, now(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\'),'),
-('Product Listing - Show Sorter for Columns Layout', 'PRODUCT_LISTING_GRID_SORT', '0', 'Allow the customer to select the item sort order (0=no, 1=yes):', '8', '44', NULL, now(), NULL, 'zen_cfg_select_option(array(\'0\', \'1\'),');");
-                
-$db->Execute("REPLACE INTO " . TABLE_CONFIGURATION_LANGUAGE . " (configuration_title, configuration_key, configuration_description, configuration_language_id) VALUES
-('Artikelliste - Layout durch Besucher steuerbar?', 'PRODUCT_LISTING_LAYOUT_STYLE_CUSTOMER', 'Soll der Kunde in den Artikellisten das Layout umschalten können?', 43),
-('Artikelliste - Sortierung durch Besucher steuerbar?', 'PRODUCT_LISTING_GRID_SORT', 'Soll der Kunde in den Artikellisten die Sortierung umschalten können?', 43);");
 
                 
 // Product Listing
