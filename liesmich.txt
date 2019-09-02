@@ -1,11 +1,11 @@
 ﻿Responsives Template Sheffield Blue 2.3 für Zen Cart 1.5.6 deutsch
 
 Anpassung des Templates Sheffield Blue (https://www.zen-cart.com/downloads.php?do=file&id=1744) von picaflor-azul für die deutsche Zen Cart Version 1.5.6
-August 2019
+September 2019
 www.webchills.at
 
 Demo des Templates:
-http://sheffieldblue156.zencartdemo.at
+https://sheffieldblue156.zencartdemo.at
 
 Originaltemplate von:
 www.picaflor-azul.com
@@ -13,9 +13,11 @@ www.picaflor-azul.com
 
 Diese Version ist ausschließlich für die deutsche Zen Cart Version 1.5.6 geeignet!
 
-Changelog Version 2.3 - August 2019
+Changelog Version 2.3 - September 2019
 - Anpassungen für PHP 7.3
 - Anpassungen für Zen Cart 1.5.6 deutsch
+- Unnötige Funktionen entfernt
+- Anleitung aktualisiert
 
 Changelog Version 2.2 - April 2019
 - Anpassungen für PHP 7.1 und MySQL 5.7
@@ -96,6 +98,11 @@ Unter Tools Boxlayout clicken Sie nun auf den Button Zurücksetzen, dadurch werd
 6)
 Stellen Sie nun die Sideboxen ein, die Sie anzeigen wollen und stellen Sie dabei die Einstellung Show Box @ Min-Width immer auf Aus.
 Diese Einstellung regelt die Anzeige von Sideboxen für mobile Geräte und für die sollten die Sideboxen immer aus sein.
+
+Hinweis:
+Unter PHP 7.3 wird beim erstmaligen Aufruf der Administration wenn das Template aktiviert wird ein Error Log mit einer PHP Notice erzeugt
+Use of undefined constant SHEFFIELD_BLUE_VERSION
+Dieses Log ist irrelevant und kann gelöscht werden, es wird nach Installation des Templates nicht mehr auftreten
 
 
 ____________________________________________________________________________________________________
