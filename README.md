@@ -3,14 +3,15 @@ Responsives Template Sheffield Blue für Zen Cart 1.5.6 deutsch
 
 Anpassung des Templates Sheffield Blue von picaflor-azul für die deutsche Zen Cart Version 1.5.6
 
-Version 2.3 beta
-Es sind noch Anpassungen im Flexible Footer Menü für PHP 7.3 nötig
+Version 2.3
 
 Diese Version ist ausschließlich für die deutsche Zen Cart Version 1.5.6 geeignet!
 
-Changelog Version 2.3 - August 2019
+Changelog Version 2.3 - September 2019
 - Anpassungen für PHP 7.3
 - Anpassungen für Zen Cart 1.5.6 deutsch
+- Unnötige Funktionen entfernt
+- Anleitung aktualisiert
 
 Changelog Version 2.2 - April 2019
 - Anpassungen für PHP 7.1 und MySQL 5.7
